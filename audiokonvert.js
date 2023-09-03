@@ -1,8 +1,11 @@
 "use strict";
 
 var audioconvert=function(){
-	var audioSRC="phoneme.wav";	
-	//var audioSRC="benderphneme.mp3";	
+	var audioSRC="test.wav";	
+	var einedatei=true;
+	
+	//var audioSRC="phoneme.wav";	
+	//var einedatei=false;
 	
 	var audacityliste=[
 	{a:0.005554,e:0.060977,s:"t"},
@@ -145,6 +148,26 @@ var audioconvert=function(){
 			var datadec;
 			
 			//Audio anhand der Liste zerlegen und einzelne Daten erzeugen
+			
+			if(einedatei){
+				for(t=0;t<buffer.length;t+=sampelstepp){
+					pos=Math.floor(t);
+					data=chan[pos];// -1..0..+1
+					minbuff+=String.fromCharCode(Math.floor(127+data*127));//+-1 to byte
+					//minbuff.push(data);
+				}
+				datadec=window.btoa(minbuff);
+				
+				var fname=audioSRC.split('.')[0];
+				
+				node=cE(ziel,"a");
+				node.setAttribute("download",fname+".dat");
+				node.innerHTML=fname+".dat";
+				node.href="data:multipart/byteranges;base64,"+datadec;
+				
+				node=cE(ziel,"br");
+			}
+			else			
 			for(i=0;i<audacityliste.length;i++){
 				dinfo=audacityliste[i];//.a .e
 				as=Math.floor(dinfo.a*buffer.sampleRate);
