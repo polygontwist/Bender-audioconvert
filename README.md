@@ -8,10 +8,10 @@ Die Textspur wurde für das Script in ein JSON-Format gebracht.
 
 Das Script nutzt die Möglichkeiten von HTML5 Audio.
 
-Für mein https://www.a-d-k.de/20160911_190335-Spracherzeugung.htm Projekt.
+Für mein [Spracherzeugungs-Projekt](https://www.a-d-k.de/20160911_190335-Spracherzeugung.htm).
 Siehe auch: https://github.com/polygontwist/speak
 
-Eingesetzt bei: https://github.com/polygontwist/Bender-PHY/tree/main
+Eingesetzt bei: [Bender-PHY](https://github.com/polygontwist/Bender-PHY/tree/main)
 
-Animatronische-Figur: https://www.thingiverse.com/thing:6200580
+Animatronische-Figur: [Futurama Bender 3D print](https://www.thingiverse.com/thing:6200580)
 
